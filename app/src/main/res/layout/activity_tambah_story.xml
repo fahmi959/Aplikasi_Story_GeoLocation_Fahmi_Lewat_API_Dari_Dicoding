@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edAddDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi"
+        android:inputType="textMultiLine" />
+
+    <Switch
+        android:id="@+id/switchItemLokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edAddDescription"
+        android:layout_marginTop="16dp"
+        android:text="Aktifkan Otomatis &amp; Pakai Lokasi Saya Saat Ini Sekarang" />
+
+
+    <EditText
+        android:id="@+id/edAddLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchItemLokasi"
+        android:hint="Latitude (Optional)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edAddLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edAddLatitude"
+        android:hint="Longitude (Optional)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnPilihGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edAddLongitude"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="3dp"
+        android:text="Gallery" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edAddLongitude"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:text="KAMERA" />
+
+    <Button
+        android:id="@+id/cameraXButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edAddLongitude"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/cameraButton"
+        android:layout_toEndOf="@+id/btnPilihGambar"
+        android:text="KAMERA X" />
+
+    <ImageView
+        android:id="@+id/imgAddStory"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/cameraXButton"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/btnTambahCerita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAddStory"
+        android:layout_marginTop="8dp"
+        android:text="Tambah Cerita" />
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+
+</RelativeLayout>
